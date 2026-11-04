@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Daniela & Julio | Nuestra boda</title>
+
+  <meta name="description" content="Una invitación especial para compartir con nosotros este día tan importante.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daniela & Julio | Nuestra boda">
+  <meta property="og:description" content="Una invitación especial para compartir con nosotros este día tan importante.">
+  <meta property="og:url" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/">
+  <meta property="og:image" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/Invitaci%C3%B3n%20Daniela%20%26%20Julio%20%E2%80%93%20WhatsApp.png">
+  <meta property="og:image:alt" content="Daniela & Julio - Nuestra boda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daniela & Julio | Nuestra boda">
+  <meta name="twitter:description" content="Una invitación especial para compartir con nosotros este día tan importante.">
+  <meta name="twitter:image" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/Invitaci%C3%B3n%20Daniela%20%26%20Julio%20%E2%80%93%20WhatsApp.png">
+</head>
+
+<body>
+  <p>Abriendo tu invitación de Daniela & Julio...</p>
+
+  <script>
+    const codigo = new URLSearchParams(window.location.search).get('codigo');
+
+    if (codigo) {
+      const destino =
+        'https://script.google.com/macros/s/AKfycbzFqxPJMs0LIubH-iDooVidS0V6qbdg1TFkNR6ABdYRTj8L0eIOmRyBatG9O7kfgpb5/exec' +
+        '?vista=invitation&codigo=' + encodeURIComponent(codigo);
+
+      window.location.replace(destino);
+    } else {
+      document.body.innerHTML =
+        '<p>Daniela & Julio - Nuestra boda</p>' +
+        '<p>Para abrir tu invitación necesitas utilizar el enlace personalizado que recibiste.</p>';
+    }
+  </script>
+</body>
+</html>
