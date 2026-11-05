@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b9def1">
 
-  <title>Daniela & Julio | Nuestra boda</title>
-
-  <meta name="description" content="Una invitación especial para compartir con nosotros este día tan importante.">
+  <title>Daniela &amp; Julio | Nuestra boda</title>
+  <meta name="description" content="Daniela &amp; Julio te invitan a celebrar su matrimonio el sábado 30 de enero de 2027. Abre tu invitación personalizada y confirma tu asistencia.">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Daniela & Julio | Nuestra boda">
-  <meta property="og:description" content="Una invitación especial para compartir con nosotros este día tan importante.">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Daniela &amp; Julio">
+  <meta property="og:title" content="Daniela &amp; Julio | ¡Nos casamos!">
+  <meta property="og:description" content="Sábado 30 de enero de 2027 · 17:00 horas. Nos encantará compartir este día contigo. Abre tu invitación personalizada.">
   <meta property="og:url" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/">
- <meta property="og:image" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/invitacion-daniela-julio-whatsapp.png">
-  <meta property="og:image:alt" content="Daniela & Julio - Nuestra boda">
-
+  <meta property="og:image" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/Invitaci%C3%B3n%20Daniela%20%26%20Julio%20%E2%80%93%20WhatsApp.png">
+  <meta property="og:image:secure_url" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/Invitaci%C3%B3n%20Daniela%20%26%20Julio%20%E2%80%93%20WhatsApp.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Invitación de matrimonio de Daniela y Julio">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Daniela & Julio | Nuestra boda">
-  <meta name="twitter:description" content="Una invitación especial para compartir con nosotros este día tan importante.">
- <meta name="twitter:image" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/invitacion-daniela-julio-whatsapp.png">
+  <meta name="twitter:title" content="Daniela &amp; Julio | ¡Nos casamos!">
+  <meta name="twitter:description" content="Sábado 30 de enero de 2027 · 17:00 horas. Abre tu invitación personalizada.">
+  <meta name="twitter:image" content="https://danielayjulio2027.github.io/invitacion-daniela-julio/Invitaci%C3%B3n%20Daniela%20%26%20Julio%20%E2%80%93%20WhatsApp.png">
 </head>
-
 <body>
-  <p>Abriendo tu invitación de Daniela & Julio...</p>
-
+  <p>Abriendo tu invitación de Daniela &amp; Julio...</p>
   <script>
-    const codigo = new URLSearchParams(window.location.search).get('codigo');
+    const params = new URLSearchParams(window.location.search);
+    const codigo = params.get('codigo') || params.get('codigoPrivado');
 
     if (codigo) {
       const destino =
@@ -35,9 +37,12 @@
       window.location.replace(destino);
     } else {
       document.body.innerHTML =
-        '<p>Daniela & Julio - Nuestra boda</p>' +
+        '<p>Daniela &amp; Julio · Nuestra boda</p>' +
         '<p>Para abrir tu invitación necesitas utilizar el enlace personalizado que recibiste.</p>';
     }
   </script>
+  <noscript>
+    <p>Para abrir tu invitación personalizada necesitas habilitar JavaScript en tu navegador.</p>
+  </noscript>
 </body>
 </html>
