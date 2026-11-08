@@ -27,13 +27,12 @@
   <p>Abriendo tu invitación de Daniela &amp; Julio...</p>
   <script>
     const params = new URLSearchParams(window.location.search);
-    const codigo = params.get('codigo') || params.get('codigoPrivado');
+  const token = params.get('token');
 
-    if (codigo) {
-      const destino =
-        'https://script.google.com/macros/s/AKfycbzFqxPJMs0LIubH-iDooVidS0V6qbdg1TFkNR6ABdYRTj8L0eIOmRyBatG9O7kfgpb5/exec' +
-        '?vista=invitation&codigo=' + encodeURIComponent(codigo);
-
+if (token) {
+  const destino =
+    'https://script.google.com/macros/s/AKfycbzFqxPJMs0LIubH-iDooVidS0V6qbdg1TFkNR6ABdYRTj8L0eIOmRyBatG9O7kfgpb5/exec' +
+    '?vista=invitation&token=' + encodeURIComponent(token);
       window.location.replace(destino);
     } else {
       document.body.innerHTML =
